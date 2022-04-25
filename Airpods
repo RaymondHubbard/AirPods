@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+
+char words[][10] = { "madam", "Russia", "India", "Japan", "China", "Brazil", "Mexico" };
+int size = sizeof(words) / sizeof(words[0]);
+
+void printer(char *, int);
+
+int main() {
+    printer(*words, size);
+
+    return 0;
+}
+
+void printer(char *array, int len) {
+    for (int i = 0; i < len; i++) {
+        printf("%s\n", (array + i));
+    }
+}
